@@ -11,10 +11,10 @@
 #' @examples 
 #' input.vec <- c(1,3)
 #' enhance.mat <- matrix(c(1,0,0,1), nrow = 2)
-#' diffused.vec <- diffuse_vec(input.vec, enhance.mat, beta = 0.5, iter.max = 10, tol = 1e-4)
+#' diffuse.vec <- diffuse_vec(input.vec, input.matrix, beta = 0.5, iter.max = 10, tol = 1e-4)
 #' 
 #' @export
-diffuse_vec=function(input.vector,input.enhance.matrix,beta=0.75,iter.max=10,tol=10^(-4)){
+diffuse_vec=function(input.vector,input.matrix,beta=0.75,iter.max=10,tol=10^(-4)){
   
         require(SMUT)
       
@@ -25,7 +25,7 @@ diffuse_vec=function(input.vector,input.enhance.matrix,beta=0.75,iter.max=10,tol
         
         repeat{
                 matrix.old=vector.new
-                vector.new <- beta*eigenMapMatMult(input.enhance.matrix,matrix.old)+(1-beta)*(input.vector)
+                vector.new <- beta*eigenMapMatMult(input.matrix,matrix.old)+(1-beta)*(input.vector)
                 diff.vector=sum(abs((vector.new-matrix.old))) #diff.vector2=max(abs((vector.new-matrix.old)))
                
                 if (iter>iter.max|diff.vector < tol){break}
