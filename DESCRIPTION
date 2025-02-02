@@ -1,0 +1,10 @@
+Package: DrugRepurposing
+Type: Package
+Title: Drug Repurposing
+Version: 0.0.1
+Authors@R: person("Shuaichao Wang", email="SHW252@pitt.edu",role = c("aut", "cre"))
+Description: Diffuse a vector using a matrix
+License: GPL-3
+Encoding: UTF-8
+RoxygenNote: 7.3.2
+LazyData: true
