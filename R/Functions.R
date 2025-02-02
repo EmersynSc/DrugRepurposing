@@ -11,10 +11,10 @@
 #' @examples 
 #' input.vec <- c(1,3)
 #' enhance.mat <- matrix(c(1,0,0,1), nrow = 2)
-#' diffused.vec <- my_diffusion_function(input.vec, enhance.mat, beta = 0.5, iter.max = 10, tol = 1e-4)
+#' diffused.vec <- diffuse_vec(input.vec, enhance.mat, beta = 0.5, iter.max = 10, tol = 1e-4)
 #' 
 #' @export
-diffus_vec=function(input.vector,input.enhance.matrix,beta=0.75,iter.max=10,tol=10^(-4)){
+diffuse_vec=function(input.vector,input.enhance.matrix,beta=0.75,iter.max=10,tol=10^(-4)){
   
         require(SMUT)
       
