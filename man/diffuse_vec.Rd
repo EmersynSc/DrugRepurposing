@@ -32,8 +32,8 @@ Drug Repurposing
 Diffuse the input vector using an enhancement matrix
 }
 \examples{
-input.vec <- c(1,3)
-input.mat <- matrix(c(1,0,0,1), nrow = 2)
+data("input.vec")
+data("input.mat")
 diffused.vec <- diffuse_vec(input.vec,input.mat, beta = 0.5, iter.max = 10, tol = 1e-4)
 
 }
